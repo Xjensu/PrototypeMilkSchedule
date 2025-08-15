@@ -1,4 +1,4 @@
-class Admin::DeletedSchedulesController < ApplicationController
+class Admin::DeletedSchedulesController < Admin::BaseAdminController
   before_action :get_deleted, only: [:destroy]
   def create
     service = DeletedScheduleService.new(create_params)

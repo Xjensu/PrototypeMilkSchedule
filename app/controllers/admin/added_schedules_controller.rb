@@ -1,4 +1,4 @@
-class Admin::AddedSchedulesController < ApplicationController
+class Admin::AddedSchedulesController < Admin::BaseAdminController
   before_action :get_added, only: [:destroy]
   def create
     service = AddedScheduleService.new(create_params)

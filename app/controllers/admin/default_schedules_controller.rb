@@ -1,4 +1,4 @@
-class Admin::DefaultSchedulesController < ApplicationController
+class Admin::DefaultSchedulesController < Admin::BaseAdminController
   before_action :load_initial_data, only: [:index]
   
 

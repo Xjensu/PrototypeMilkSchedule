@@ -1,4 +1,4 @@
-class Admin::TeachersController < ApplicationController
+class Admin::TeachersController < Admin::BaseAdminController
   def index
     @teachers = TeachersFetcher.new(
       search_query: params[:search],

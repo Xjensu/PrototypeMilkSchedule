@@ -1,4 +1,4 @@
-class Admin::AcademicPeriodsController < ApplicationController
+class Admin::AcademicPeriodsController < Admin::BaseAdminController
   before_action :set_group, only: [:new], if: -> { params[:group_id].present? }
   before_action :set_query_params, only: [:create, :destroy]
   before_action :set_faculty_id, only: [:new, :create, :destroy]

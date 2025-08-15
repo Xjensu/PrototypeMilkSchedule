@@ -3,4 +3,4 @@
   Lesson.create!(lesson_type: type)
 end
 
-User.create(email: 'testadmin@gmail.com', password: 'password')
+User.create(email: 'testadmin@gmail.com', password: 'password', admin: true)

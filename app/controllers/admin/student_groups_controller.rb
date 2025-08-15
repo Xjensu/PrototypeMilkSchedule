@@ -1,4 +1,4 @@
-class Admin::StudentGroupsController < ApplicationController
+class Admin::StudentGroupsController < Admin::BaseAdminController
   def index
     @groups = StudentGroup.where(faculty_id: params[:faculty_id]).order(:group_name)
     @academic_periods = AcademicPeriod.where(faculty_id: params[:faculty_id])

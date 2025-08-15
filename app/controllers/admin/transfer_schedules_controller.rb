@@ -1,4 +1,4 @@
-class Admin::TransferSchedulesController < ApplicationController
+class Admin::TransferSchedulesController < Admin::BaseAdminController
   before_action :load_academic_period, only: [:index]
 
   def index
