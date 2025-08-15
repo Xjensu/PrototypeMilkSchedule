@@ -125,6 +125,7 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    htmlbeautifier (1.4.3)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
@@ -379,6 +380,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise (~> 4.9)
+  htmlbeautifier (~> 1.4)
   jbuilder
   jsbundling-rails
   kamal

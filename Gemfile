@@ -69,3 +69,5 @@ gem "devise", "~> 4.9"
 gem "RubyInline", "~> 3.14"
 
 gem "pundit", "~> 2.5"
+
+gem "htmlbeautifier", "~> 1.4"
