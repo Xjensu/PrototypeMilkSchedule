@@ -1,0 +1,23 @@
+<div class="row">
+  <% default_times.each do |time| %>
+    <% 
+      regular_schedule = schedules.where(start_time: time, under: false)
+      regular_schedule += [nil] * (2 - regular_schedule.size)
+      
+      under_schedule = schedules.where(start_time: time, under: true)
+      under_schedule += [nil] * (2 - under_schedule.size)
+    %>
+
+    <div class="col-md-2">
+      <%= time %>
+    </div>
+
+    <div class="col-md-9 pb-4">
+      <%= render partial: card_partial, collection: regular_schedule, as: :schedule, 
+           locals: { param: param.merge(under:false, time: time), card_stimulus:card_stimulus, card_attributes: card_attributes } %>
+      <hr>
+      <%= render partial: card_partial, collection: under_schedule, as: :schedule, 
+           locals: { param: param.merge(under: true, time: time) , card_stimulus:card_stimulus, card_attributes: card_attributes } %>
+    </div>
+  <% end %>
+</div>

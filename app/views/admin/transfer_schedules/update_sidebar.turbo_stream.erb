@@ -1,0 +1,15 @@
+<% if @datas_source.present? %>
+  <% @datas_source.each do |k,v| %>
+    <%= turbo_stream.prepend "#{@source}_#{k}" do %>
+      <%= render partial: 'change_card', locals: { change: v, method: k.to_s, target: "#{@source}" } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% if @datas_target.present? %>
+  <% @datas_target.each do |k,v| %>
+    <%= turbo_stream.prepend "#{@target}_#{k}" do %>
+      <%= render partial: 'change_card', locals: { change: v, method: k.to_s, target: "#{@target}" } %>
+    <% end %>
+  <% end %>
+<% end %>
